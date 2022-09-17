@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Creative Portfolio Website Design | Responsive Design</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style8.css')}}">
+</head>
+<body>
+    <section>
+        <header>
+	    	<a href="#" class="logo">Testimonial</a>
+            <div class="navigation">
+                <ul>
+                    <li class="list">
+                        <a href="/home">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/about">
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="title">About</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/services">
+                            <span class="icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </span>
+                            <span class="title">Services</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/work">
+                            <span class="icon">
+                                <i class="fas fa-briefcase"></i>
+                            </span>
+                            <span class="title">Work</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/resume">
+                            <span class="icon">
+                                <i class="fas fa-file"></i>
+                            </span>
+                            <span class="title">Resume</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/contact">
+                            <span class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </span>
+                            <span class="title">Contact</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/testimonial">
+                            <span class="icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </span>
+                            <span class="title">Testimonial</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="/social">
+                            <span class="icon">
+                                <i class="fas fa-signal"></i>
+                            </span>
+                            <span class="title">Social</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+	    </header>
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“The key is to set realistic customer expectations, 
+                                and then not to just meet them, but to exceed them — 
+                                preferably in unexpected and helpful ways.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="{{ url_for('static', filename='images/user1.jpg')}}">
+                                </div>
+                                <h3>Richard Branson<br><span>Creative Designer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“Website is simple and clean & very innovativaly created by 
+                                the developers. So i think they will also ensure that their 
+                                customers websites also get make like their websites.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="{{ url_for('static', filename='images/user2.jpg')}}">
+                                </div>
+                                <h3>Daisy Smith<br><span>Assistant</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“We all see many frauds company and websites in the market 
+                                 but this website is trustworthy. I prefer this website to make 
+                                my own personal portfolio website.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                  <img src="{{ url_for('static', filename='images/user3.jpg')}}">
+                                </div>
+                                <h3>Connor Willson<br><span>HR</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“Best web development platform that provides ensurity
+                                to improve their business orientation.Website is ease to 
+                                use and it has adaptive interface.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                  <img src="{{ url_for('static', filename='images/user4.jpg')}}">
+                                </div>
+                                <h3>Victoria Freeman<br><span>Web Designer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“The most advanced and user-friendly website on the market
+                                I recommend it to everyone. It is easy to use with excellent
+                                navigation and visualization.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                  <img src="{{ url_for('static', filename='images/user5.jpg')}}">
+                                </div>
+                                <h3>Carmen Ortiz<br><span>Marketing Manager</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="{{ url_for('static', filename='images/quote.png')}}" class="quote">
+                        <div class="content">
+                            <p>“The support is fantastic and makes it so much easier 
+                                for our team to bring our ideas to life and accomplish
+                                our goals with this website.” </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                  <img src="{{ url_for('static', filename='images/user6.jpg')}}">
+                                </div>
+                                <h3>Anne Griffin<br><span>Supervisor</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/facebook.png')}}"></a></li>
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/twitter.png')}}"></a></li>
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/instagram.png')}}"></a></li>
+		</ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+        },
+        loop: true,
+        });
+    </script>
+    <script>
+        let list = document.querySelectorAll('.list');
+        for (let i=0; i<list.length; i++){
+            list[i].onmouseover = function(){
+                let j = 0;
+                while (j<list.length){
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/718354c4cc.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Creative Portfolio Website Design | Responsive Design</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/style3.css')}}">
+</head>
+<body>
+    <header>
+		<a href="#" class="logo">Services</a>
+    </header>
+    <div class="conatiner">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/home">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="title">About Me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/services">
+                        <span class="icon">
+                            <ion-icon name="bag-handle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/work">
+                        <span class="icon">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                        </span>
+                        <span class="title">Work</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/resume">
+                        <span class="icon">
+                            <ion-icon name="document-outline"></ion-icon>
+                        </span>
+                        <span class="title">Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        <span class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/testimonial">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </span>
+                        <span class="title">Testimonial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/social">
+                        <span class="icon">
+                            <ion-icon name="cellular-outline"></ion-icon>
+                        </span>
+                        <span class="title">Social</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="toggle"></div>
+    </div>
+    <div class="container">
+        <div class="serviceBox">
+            <div class="icon" style="--i:#4eb7ff">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Design</h2>
+                <p>Web design encompasses many different skills 
+                    and disciplines in the production and maintenance 
+                    of websites.</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#fd6494">
+                <ion-icon name="code-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Development</h2>
+                <p>It is the process of designing,programming, documenting, 
+                    testing, and bug fixing involved in creating and maintaining 
+                    applications.</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#43f390">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>SEO</h2>
+                <p>Search engine optimization is the process of improving the 
+                    quality and quantity of website traffic to a website or a 
+                    web page from search engines</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#ffb508">
+                <ion-icon name="bar-chart-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Digital Marketing</h2>
+                <p>Digital marketing is the component of marketing that uses 
+                    internet and online based digital technologies</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#37ba82">
+                <ion-icon name="videocam-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Video Editing</h2>
+                <p>Video editing is used to structure and present all video 
+                    information, including films and television shows, video 
+                    advertisements and video essays.</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#cd57ff">
+                <ion-icon name="game-controller-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h2>Games Development</h2>
+                <p>In game Development the effort is undertaken by a developer, 
+                    ranging from a single person to an international team dispersed 
+                    across the globe.</p>
+            </div>
+        </div>
+    </div>
+    <ul class="sci">
+        <li><a href="#"><img src="{{ url_for('static', filename='icons/facebook.png')}}"></a></li>
+        <li><a href="#"><img src="{{ url_for('static', filename='icons/twitter.png')}}"></a></li>
+        <li><a href="#"><img src="{{ url_for('static', filename='icons/instagram.png')}}"></a></li>
+    </ul>
+    <script src="https://kit.fontawesome.com/718354c4cc.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const navigation = document.querySelector('.navigation')
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

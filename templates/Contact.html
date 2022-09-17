@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Creative Portfolio Website Design | Responsive Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style6.css')}}">
+</head>
+<body>
+    <section>
+        <header>
+			<a href="#" class="logo">Contact</a>
+		</header>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="{{ url_for('static', filename='icons/location.png')}}"></span>
+                            <span>2912 Meadowbrook Road<br>
+                                Los Angeles, CA<br>
+                                90017</span>
+                        </li>
+                        <li>
+                            <span><img src="{{ url_for('static', filename='icons/mail.png')}}"></span>
+                            <span>js1932002singh@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><img src="{{ url_for('static', filename='icons/call.png')}}"></span>
+                            <span>+91 9717682686</span>
+                        </li>
+                    </ul>
+                </div>
+                    <ul class="sci">
+			            <li><a href="#"><img src="{{ url_for('static', filename='icons/facebook.png')}}"></a></li>
+			            <li><a href="#"><img src="{{ url_for('static', filename='icons/twitter.png')}}"></a></li>
+			            <li><a href="#"><img src="{{ url_for('static', filename='icons/instagram.png')}}"></a></li>
+		            </ul>
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" name="" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="" required></textarea>
+                        <span>Write your message here....</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul class="nav_list">
+                <li>
+                    <a href="/home">
+                        <i class='bx bx-home-alt'></i>
+                        <span class="links_name">Home</span>
+                        <span class="tooltip">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">About Me</span>
+                        <span class="tooltip">About Me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/services">
+                        <i class='bx bx-paper-plane'></i>
+                        <span class="links_name">Services</span>
+                        <span class="tooltip">Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/work">
+                        <i class='bx bx-briefcase'></i>
+                        <span class="links_name">Work</span>
+                        <span class="tooltip">Work</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/resume">
+                        <i class='bx bxs-id-card'></i>
+                        <span class="links_name">Resume</span>
+                        <span class="tooltip">Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        <i class='bx bx-phone'></i>
+                        <span class="links_name">Contact</span>
+                        <span class="tooltip">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/testimonial">
+                        <i class='bx bx-comment'></i>
+                        <span class="links_name">Testimonial</span>
+                        <span class="tooltip">Testimonial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/social">
+                        <i class='bx bxl-meta'></i>
+                        <span class="links_name">Social</span>
+                        <span class="tooltip">Social</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

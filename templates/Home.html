@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Creative Portfolio Website Design | Responsive Design</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style1.css')}}">
+</head>
+<body>
+	<section class="banner">
+		<header>
+			<a href="#" class="logo">Portfolio</a>
+			<div class="toggle"></div>
+		</header>
+		<img src="{{ url_for('static', filename='images/men.png')}}" class="men">
+		<div class="content">
+			<div class="contentBx">
+				<h4>Hello,</h4>
+				<h2>I'm Jaspreet</h2>
+				<h3>Freelancer Web Designer</h3>
+				<p>High-performing and aesthetically pleasing websites developed with the latest UI and UX designs
+				.I design websites that resonates with the intended target audience and offers great user experience.</p>
+				<a href="/hire">Hire Me</a>
+				<a href="{{ url_for('static', filename='files/Resume.pdf')}}" download="computer">Download CV</a>
+			</div>
+		</div>
+		<ul class="sci">
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/facebook.png')}}"></a></li>
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/twitter.png')}}"></a></li>
+			<li><a href="#"><img src="{{ url_for('static', filename='icons/instagram.png')}}"></a></li>
+		</ul>
+		<ul class="menu">
+			<li><a href="/home">Home</a></li>
+			<li><a href="/about">About Me</a></li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/work">Work</a></li>
+			<li><a href="/resume">Resume</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/testimonial">Testimonial</a></li>
+			<li><a href="/social">Social</a></li>
+		</ul>
+		<img src="{{ url_for('static', filename='icons/1.png')}}" class="elements" data-speed="8">
+		<img src="{{ url_for('static', filename='icons/2.png')}}" class="elements" data-speed="6">
+		<img src="{{ url_for('static', filename='icons/3.png')}}" class="elements" data-speed="-6">
+		<img src="{{ url_for('static', filename='icons/4.png')}}" class="elements" data-speed="-4">
+	</section>
+	<script src="https://kit.fontawesome.com/718354c4cc.js" crossorigin="anonymous"></script>
+	<script>
+		const toggle = document.querySelector('.toggle');
+		const banner = document.querySelector('.banner');
+		toggle.onclick=function(){
+			toggle.classList.toggle('active');
+			banner.classList.toggle('active');
+		}
+		function parallax(e){
+			this.querySelectorAll('.elements').forEach(Layer => {
+				const speed = Layer.getAttribute('data-speed');
+				const x = (window.innerWidth - e.pageX*speed)/100;
+				Layer.style.transform = `translateX(${x}px)`;
+			})
+		}
+		document.addEventListener("mousemove",parallax);
+	</script>
+</body>
+</html>

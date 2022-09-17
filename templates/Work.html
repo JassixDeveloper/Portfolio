@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Creative Portfolio Website Design | Responsive Design</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/style4.css')}}">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Work</a>
+	</header>
+	<div class="container">
+		<div class="box">
+			<div class="icon">01</div>
+			<div class="content">
+				<h3>Parallax Pages</h3>
+				<p>Parallax scrolling is a web design technique in which the website background 
+					moves at a slower pace than the foreground this results in a 3D effect as visitors 
+					scroll down the site, adding a sense of depth and creating a more immersive browsing experience. 
+					Parallax is based on optical illusion.</p>
+				<a href="/parallax pages">View Me</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="icon">02</div>
+			<div class="content">
+				<h3>Creativity</h3>
+				<p>The custom HTML creative is unique in that it allows you to create custom 
+					content that is displayed as part of your page.Custom HTML creatives can also be 
+					useful for content management, allowing you to choose which surveys are shown to specific types of website visitors</p>
+				<a href="/creativity pages">View Me</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="icon">03</div>
+			<div class="content">
+				<h3>Javascripts</h3>
+				<p>JavaScript, often abbreviated as JS, is a programming language that 
+					conforms to the ECMAScript specification. JavaScript is high-level, often 
+					just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation,
+					 and first-class functions.</p>
+				<a href="/javascript pages">View Me</a>
+			</div>
+		</div>
+	</div>
+	<nav id="menu">
+		<ul class="menu">
+			<li><a href="/home">Home</a></li>
+			<li><a href="/about">About Me</a></li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/work">Work</a></li>
+			<li><a href="/resume">Resume</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/testimonial">Testimonial</a></li>
+			<li><a href="/social">Social</a></li>
+		</ul>
+		<img src="{{ url_for('static', filename='icons/cancel.png')}}" class="close-icon" onclick="closemenu()">
+	</nav>
+	<img src="{{ url_for('static', filename='icons/menu.png')}}" class="menu-icon" onclick="openmenu()">
+	<ul class="sci">
+        <li><i href="#"><img src="{{ url_for('static', filename='icons/facebook.png')}}"></i></li>
+        <li><i href="#"><img src="{{ url_for('static', filename='icons/twitter.png')}}"></i></li>
+        <li><i href="#"><img src="{{ url_for('static', filename='icons/instagram.png')}}"></i></li>
+    </ul>
+	<script>
+		var menu = document.getElementById("menu");
+		function closemenu(){
+			menu.style.top = "-100vh";
+		}
+		function openmenu(){
+			menu.style.top = "0";
+		}
+</script>
+</body>
+</html>

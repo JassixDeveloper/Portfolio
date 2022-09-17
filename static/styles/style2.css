@@ -1,0 +1,306 @@
+@import url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLFj_Z11lFc-K.woff2);
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 100px;
+	display: flex;
+	align-items: center;
+	background: #21283a;
+	overflow-x: hidden;
+}
+.banner:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 300px;
+	width: 400px;
+	height: 320px;
+	background: #fa215e;
+	z-index: 1;
+	transition: 1s;
+}
+.banner.active:before
+{
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: #21283a;
+}
+.banner:after
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+	width: 400px;
+	height: 200px;
+	background: #aeff0f;
+	z-index: 1;
+	transition: 1s;
+}
+.banner.active::after
+{
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background: #21283a;
+}
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px;
+}
+header .logo
+{
+	font-size: 2em;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	transition: 0.5s;
+	transform-origin: right;
+}
+.banner.active .logo
+{
+	transform: scale(0);
+	transform-origin: left;
+}
+.toggle::before
+{
+	content: '\f0c9';
+	font-family: fontAwesome;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+}
+.toggle.active::before
+{
+	content: '\f00d';
+}
+.content
+{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+	transform-origin: right;
+}
+.banner.active .content
+{
+	transform: scale(0);
+	transform-origin: right;
+}
+.content .contentBx
+{
+	max-width: 1000px;
+}
+.content .contentBx h2
+{
+	font-size: 4em;
+	line-height: 1em;
+	color: #fff;
+	text-transform: uppercase;
+}
+.content .contentBx p
+{
+	font-size: 1em;
+	color: #fff;
+	margin: 10px 0 20px;
+	font-weight: 300;
+}
+.content .contentBx a
+{
+	display: inline-block;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.content .contentBx a:hover
+{
+	letter-spacing: 4px;
+	background: #fff;
+	color: #111;
+}
+.content .imgBx img
+{
+	max-width: 100%;
+	min-width: 400px;
+}
+.sci
+{
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	transition: 0.5s;
+	transform-origin: right;
+}
+.banner.active .sci
+{
+	transform: scale(0);
+	transform-origin: left;
+}
+.sci li
+{
+	list-style: none;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+.sci li a
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+.sci li:hover a
+{
+	background: #fff;
+}
+.sci li a img
+{
+	filter: invert(1);
+	transform: scale(0.6);
+}
+.sci li:hover a img
+{
+	filter: invert(0);
+}
+.menu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+	z-index: 2;
+	visibility: hidden;
+	opacity: 0;
+}
+.banner.active .menu
+{
+	visibility: visible;
+	opacity: 1;
+}
+.menu li
+{
+	list-style: none;
+}
+.menu li a
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 5px 10px;
+	margin: 5px 0;
+	display: inline-block;
+	transition: 0.2s ease-in-out;
+}
+.menu li a:hover
+{
+	letter-spacing: 6px;
+	background: #fff;
+	color: #161a23;
+}
+.elements
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.2s;
+	pointer-events: none;
+}
+.banner.active .elements
+{
+	visibility: hidden;
+	opacity: 0;
+}
+@media (max-width: 991px)
+{
+	.elements
+	{
+		visibility: hidden;
+		opacity: 0;
+	}
+	header
+	{
+		padding: 20px 40px;
+	}
+	.banner
+	{
+		padding: 40px;
+		overflow: hidden;
+	}
+	.banner:before{
+		top: 100px;
+		left: 0;
+		width: 170px;
+		height: 370px;
+	}
+	.banner:after{
+		bottom: 0;
+		right: 0;
+		width: 80px;
+		height: 60px;
+	}
+	.content
+	{
+		flex-direction: column-reverse;
+		margin: 50px 0;
+	}
+	.content .contentBx
+	{
+		max-width: 100%;
+	}
+	.content .imgBx img
+	{
+		max-width: 100%;
+		min-width: 300px;
+	}
+	.content .contentBx h2
+	{
+		font-size: 2.5em;
+	}
+}
